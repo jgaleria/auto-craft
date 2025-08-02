@@ -18,7 +18,10 @@ export default function CostDashboard({
 
   return (
     <div className="bg-white rounded-lg border border-gray-200 p-6">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">Cost Summary</h3>
+      <div className="mb-4">
+        <h3 className="text-lg font-semibold text-gray-900">Cost Summary</h3>
+        <p className="text-sm text-gray-500 mt-1">Estimates for demo purposes only</p>
+      </div>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="text-center p-5 bg-gradient-to-br from-blue-50 to-gray-100 border border-gray-200 rounded-lg">
