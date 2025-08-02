@@ -125,21 +125,12 @@ export default function BOMGenerator() {
           </div>
 
           {/* Success Message */}
-          <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6">
-            <div className="flex items-center">
-              <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <div>
-                <div className="text-lg font-bold text-green-800 mb-1">
-                  BOM Generated Successfully!
-                </div>
-                <div className="text-sm text-green-700">
-                  Found {bomData.bom.length} components from {new Set(bomData.bom.map(item => item.supplier)).size} suppliers for &quot;{bomData.productName}&quot;
-                </div>
-              </div>
+          <div className="text-center">
+            <div className="bg-green-50 border border-green-200 rounded-lg px-4 py-2 inline-flex items-center">
+              <svg className="w-4 h-4 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span className="text-sm text-green-700">BOM Generated</span>
             </div>
           </div>
 

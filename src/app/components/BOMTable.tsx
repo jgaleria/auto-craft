@@ -29,7 +29,7 @@ export default function BOMTable({ bomData, totalCost, laborCost }: BOMTableProp
     if (normalizedName.includes('arrow')) return 'https://www.arrow.com';
     if (normalizedName.includes('farnell')) return 'https://www.farnell.com';
     if (normalizedName.includes('rs components')) return 'https://www.rs-components.com';
-    return 'https://www.google.com/search?q=' + encodeURIComponent(supplierName + ' electronics supplier');
+    return 'https://www.google.com/search?q=' + encodeURIComponent(supplierName);
   };
 
 
@@ -50,6 +50,7 @@ export default function BOMTable({ bomData, totalCost, laborCost }: BOMTableProp
               <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Qty</th>
               <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Unit Cost</th>
               <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Supplier</th>
+              <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Lead Time</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-200">
@@ -70,6 +71,7 @@ export default function BOMTable({ bomData, totalCost, laborCost }: BOMTableProp
                     {item.supplier}
                   </a>
                 </td>
+                <td className="px-4 py-4 text-sm text-gray-600">{item.leadTime}</td>
               </tr>
             ))}
           </tbody>

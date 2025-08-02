@@ -133,13 +133,11 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Add realistic delay to make it feel like complex AI processing
-    const delay = useQuickDemo ? 
-      Math.random() * 3000 + 2000 : // 2-5 seconds for quick demo
-      isImageInput ? 
-        Math.random() * 8000 + 12000 : // 12-20 seconds for image analysis
-        Math.random() * 6000 + 8000; // 8-14 seconds for text generation
-    await new Promise(resolve => setTimeout(resolve, delay));
+    // Only add a small delay for quick demo to feel responsive
+    if (useQuickDemo) {
+      const delay = Math.random() * 1000 + 500; // 0.5-1.5 seconds for quick demo only
+      await new Promise(resolve => setTimeout(resolve, delay));
+    }
 
     // For quick demo or if we have a good sample match for text input
     if (!isImageInput) {

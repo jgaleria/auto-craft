@@ -330,6 +330,86 @@ export const sampleBOMs: Record<string, BOMResponse> = {
     "estimatedLaborCost": 56.50,
     "totalCost": 200.00,
     "estimatedRetailPrice": 599.99
+  },
+  "wireless phone charger": {
+    "productName": "Wireless Phone Charger",
+    "category": "Electronics Accessory",
+    "bom": [
+      {
+        "partNumber": "WPC-TX-5W",
+        "description": "5W Wireless Power Transmitter IC",
+        "material": "Silicon Chip",
+        "quantity": 1,
+        "unit": "piece",
+        "estimatedCost": 2.85,
+        "supplier": "Digikey",
+        "leadTime": "2 weeks"
+      },
+      {
+        "partNumber": "COIL-TX-15mm",
+        "description": "Wireless Charging Transmitter Coil",
+        "material": "Copper Wire + Ferrite",
+        "quantity": 1,
+        "unit": "piece",
+        "estimatedCost": 1.20,
+        "supplier": "Mouser",
+        "leadTime": "3 weeks"
+      },
+      {
+        "partNumber": "PCB-WC-V2",
+        "description": "2-layer PCB with Copper Fill",
+        "material": "FR4 + Copper",
+        "quantity": 1,
+        "unit": "piece",
+        "estimatedCost": 0.95,
+        "supplier": "JLCPCB",
+        "leadTime": "1 week"
+      },
+      {
+        "partNumber": "CASE-WC-100",
+        "description": "ABS Plastic Case with Anti-slip Base",
+        "material": "ABS Plastic + Rubber",
+        "quantity": 1,
+        "unit": "piece",
+        "estimatedCost": 1.85,
+        "supplier": "Foxconn",
+        "leadTime": "4 weeks"
+      },
+      {
+        "partNumber": "LED-GRN-3mm",
+        "description": "Green Status LED Indicator",
+        "material": "LED Semiconductor",
+        "quantity": 1,
+        "unit": "piece",
+        "estimatedCost": 0.15,
+        "supplier": "Arrow",
+        "leadTime": "1 week"
+      },
+      {
+        "partNumber": "USB-C-PWR",
+        "description": "USB-C Power Input Connector",
+        "material": "Copper Alloy",
+        "quantity": 1,
+        "unit": "piece",
+        "estimatedCost": 0.55,
+        "supplier": "Farnell",
+        "leadTime": "2 weeks"
+      },
+      {
+        "partNumber": "CAP-220uF",
+        "description": "Electrolytic Capacitor 220µF",
+        "material": "Aluminum + Electrolyte",
+        "quantity": 2,
+        "unit": "piece",
+        "estimatedCost": 0.25,
+        "supplier": "RS Components",
+        "leadTime": "1 week"
+      }
+    ],
+    "totalMaterialCost": 8.05,
+    "estimatedLaborCost": 3.95,
+    "totalCost": 12.00,
+    "estimatedRetailPrice": 29.99
   }
 };
 

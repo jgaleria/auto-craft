@@ -248,7 +248,7 @@ export default function DesignInput({ onGenerate, onBOMGenerated, onError }: Des
                 ref={fileInputRef}
                 type="file"
                 onChange={handleFileInputChange}
-                accept=".png,.jpg,.jpeg,.svg,.pdf"
+                accept=".png,.jpg,.jpeg,.gif,.webp"
                 className="hidden"
                 disabled={isSubmitting}
               />
@@ -308,7 +308,7 @@ export default function DesignInput({ onGenerate, onBOMGenerated, onError }: Des
                     </button>
                   </div>
                   <p className="text-xs text-gray-500 mt-2">
-                    Supports PNG, JPG, PDF, SVG up to 10MB
+                    Supports PNG, JPG, GIF, WebP up to 10MB
                   </p>
                 </div>
               )}
@@ -375,18 +375,21 @@ export default function DesignInput({ onGenerate, onBOMGenerated, onError }: Des
             </button>
           ))}
           
-          {/* Quick Demo Button */}
+          {/* Wireless Phone Charger Example */}
           <button
-            onClick={() => handleQuickDemo(productExamples[0].description)}
+            onClick={() => handleQuickDemo('Wireless phone charger with 5W fast charging, LED status indicator, USB-C input, and anti-slip base pad.')}
             disabled={isSubmitting}
-            className="p-3 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg border-2 border-dashed border-blue-300 hover:from-blue-100 hover:to-indigo-100 hover:border-blue-400 hover:shadow-md hover:scale-[1.02] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex flex-col items-center justify-center min-h-[100px]"
+            className="text-left p-3 bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg border border-gray-200 hover:from-blue-50 hover:to-blue-100 hover:border-blue-400 hover:shadow-md hover:scale-[1.02] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <svg className="w-6 h-6 text-blue-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-            <div className="font-semibold text-blue-900 text-sm">Quick Demo</div>
-            <div className="text-xs text-blue-600 text-center">
-              Generate instant BOM
+            <div className="flex items-center space-x-2 mb-2">
+              <span className="text-xl">🔋</span>
+              <div>
+                <div className="font-semibold text-gray-900 text-sm">Wireless Phone Charger</div>
+                <div className="text-xs text-gray-500">Electronics Accessory</div>
+              </div>
+            </div>
+            <div className="text-xs text-gray-600 line-clamp-2">
+              Wireless phone charger with 5W fast charging, LED status indicator, USB-C input...
             </div>
           </button>
         </div>
